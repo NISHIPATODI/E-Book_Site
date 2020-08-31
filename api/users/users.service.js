@@ -83,7 +83,7 @@ module.exports={
               ],(error,results,fields)=>{
                   if(error)
                   {
-                    console.log('error occure'+ error);
+                    console.log('error occur'+ error);
                    // return res.send(`File has not been uploaded.`);
               
                       return callback(error);
@@ -112,7 +112,7 @@ module.exports={
     },
     
     selectbookicon:(callback)=>{
-        pool.query(`select name,data from img where name ="wlogo.png"`,[],(error,results,fields)=>{
+        pool.query(`select name,data from img `,[],(error,results,fields)=>{
             if(error)
             {
                 console.log('error occur while retrieving');
@@ -150,7 +150,7 @@ uploadbookFile:(body,callback)=>{
           ],(error,results,fields)=>{
               if(error)
               {
-                console.log('error occure'+ error);
+                console.log('error occur'+ error);
                // return res.send(`File has not been uploaded.`);
           
                   return callback(error);
@@ -179,7 +179,7 @@ uploadbookFile:(body,callback)=>{
 },
 
 selectbookfile:(callback)=>{
-    pool.query(`select name ,data from txtfile where name ="localhost (copy).txt"`,[],(error,results,fields)=>{
+    pool.query(`select name ,data from txtfile`,[],(error,results,fields)=>{
         if(error)
         {
             console.log('error occur while retrieving');

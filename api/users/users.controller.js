@@ -7,7 +7,7 @@ module.exports={
             {
                 console.log(err);
                 return res.status(400).json({
-                    success:1,
+                    success:0,
                     messege:"database connection error"
                 });
             }
@@ -63,12 +63,12 @@ module.exports={
                 });
             }
             else{
-                return res.send(`File has been uploaded.`);
+                //return res.send(`File has been uploaded.`);
           
-               /* return res.status(200).json({
+               return res.status(200).json({
                     success:1,
                     data:results
-                });*/
+                });
             };
         })
     },
@@ -106,13 +106,13 @@ module.exports={
                 var name= results[0].name;
                const data= results[0].data;
                console.log(`data is ${name}`);
-                res.render("book_icon", { data: results[0].data.toString('base64'), name: results[0].name});
+               // res.render("book_icon", { data: results[0].data.toString('base64'), name: results[0].name});
                // res.render("book_res", { data: results[0].data, name: results[0].name});
         
-                /*return res.json({
+                return res.json({
                     success:1,
                     data:results
-                })*/
+                })
             }
         })
      },
@@ -124,17 +124,17 @@ module.exports={
             {
                 console.log(err);
                 return res.status(400).json({
-                    success:1,
+                    success:0,
                     messege:"database connection error"
                 });
             }
             else{
-                return res.send(`File has been uploaded.`);
+                //return res.send(`File has been uploaded.`);
           
-               /* return res.status(200).json({
+               return res.status(200).json({
                     success:1,
                     data:results
-                });*/
+                });
             };
         })
     },
@@ -150,13 +150,12 @@ module.exports={
                 var name= results[0].name;
                const data= results[0].data;
                console.log(`data is ${data}`);
-                //res.render("book_res", { data: results[0].data.toString('base64'), name: results[0].name});
-                res.render("book_res", { data: results[0].data, name: results[0].name});
+                //res.render("book_res", { data: results[0].data, name: results[0].name});
         
-                /*return res.json({
+                return res.json({
                     success:1,
                     data:results
-                })*/
+                })
             }
         })
      },

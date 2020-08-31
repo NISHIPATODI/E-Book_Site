@@ -17,16 +17,17 @@ router.get("/bookfile", getbookfile);
 
 
 //TO store book and icon from DATABASE
-router.get("/uploadbookicon",(req, res) => {
+/*router.get("/uploadbookicon",(req, res) => {
    
-    return res.sendFile(`/home/nishi/finalproject/finalprojectN/views/index.html`);
-  });
-router.post("/uploadimg",upload.single("file"), uploadbookicon);
+    //return res.sendFile(`/home/nishi/finalproject/finalprojectN/views/index.html`);
+  });*/
+router.post("/uploadimg",upload.single("image"), uploadbookicon);
+//router.post("/uploadimg",upload, uploadbookicon);
 
-router.get("/uploadbookFile",(req, res) => {
+/*router.get("/uploadbookFile",(req, res) => {
    
-    return res.sendFile(`/home/nishi/finalproject/finalprojectN/views/bookfile.html`);
-  });
+    return res.sendFile(`/home/nishi/finalprojectC/views/bookfile.html`);
+  });*/
 router.post("/uploadfile",uploadFileMiddleware.single("file"), uploadbookFile);
 
 
